@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import Ap2 from "./ap2";
 import reportWebVitals from "./reportWebVitals";
 import MyComponent from "./MyComponent";
 import $ from "jquery";
@@ -114,6 +115,12 @@ const posts = [
   { id: 2, title: "Installation", content: "You can install React from npm." },
 ];
 
+const DATA = [
+  { id: "todo-0", name: "FAT", completed: true },
+  { id: "todo-1", name: "Sleep", completed: false },
+  { id: "todo-2", name: "Repeat", completed: false },
+];
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -123,6 +130,7 @@ root.render(
     <UserGist source="https://api.github.com/users/octocat/gists" />
     <NumberList numbers={numbers} />
     <App />
+    <Ap2 tasks={DATA} />
     <Blog posts={posts} />
   </React.StrictMode>
 );
@@ -130,4 +138,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);
