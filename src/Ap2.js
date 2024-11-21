@@ -74,7 +74,7 @@ function Ap2(props) {
       />
     ));
   const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
-  const headingText = `${taskList.length} ${tasksNoun} remaining`;
+  const headingText = `${taskList.length} ${tasksNoun} listed under ${filter}`;
   function usePrevious(value) {
     const ref = useRef();
     useEffect(() => {

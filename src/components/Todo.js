@@ -27,6 +27,7 @@ export default function Todo(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (newName.length < 1) return;
     props.editTask(props.id, newName);
     setNewName("");
     setEditing(false);

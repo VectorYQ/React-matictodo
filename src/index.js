@@ -116,7 +116,7 @@ const posts = [
 ];
 
 const DATA = [
-  { id: "todo-0", name: "FAT", completed: true },
+  { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
   { id: "todo-2", name: "Repeat", completed: false },
 ];

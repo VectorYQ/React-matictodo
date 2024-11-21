@@ -8,6 +8,7 @@ function Form(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
+    if (name.length < 1) return;
     props.addTask(name);
     setName("");
   }
