@@ -8,11 +8,14 @@ const MyComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://api.example.com/data");
+        const response = await axios.get(
+          // "http://119.147.212.81:7709"
+          "https://jsonplaceholder.typicode.com/users"
+        );
         setData(response.data);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.log("Error fetching data:", error);
       }
     };
 
